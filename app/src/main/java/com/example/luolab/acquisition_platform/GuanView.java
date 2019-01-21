@@ -419,10 +419,8 @@ public class GuanView extends Fragment{
 
                         FPS =  (fftPoints * 1000)/ (int)(timeEnd - timeStart) ;
 
-                        if(sample_arr.length >= 512)
+                        if(sample_arr.length > 512)
                             freq_arr = f.fft_energy_squared(sample_arr, 512);
-                        else if (sample_arr.length >= 1024 )
-                            freq_arr = f.fft_energy_squared(sample_arr, 1024);
                         else
                             freq_arr = f.fft_energy_squared(sample_arr, 256);
                         double factor = fftPoints / FPS;          // (N / Fs)
@@ -612,11 +610,11 @@ public class GuanView extends Fragment{
     {
         G_Graph.getViewport().setMaxX(5);
         //G_Graph.getViewport().setMaxY(255);
-        G_Graph.getViewport().setMaxY(800);
+        G_Graph.getViewport().setMaxY(1100);
         //G_Graph.getViewport().setMinY(20);
         G_Graph.getViewport().setYAxisBoundsManual(true);
 
-        G_Graph.getViewport().setMinX(300);
+        G_Graph.getViewport().setMinX(0);
         G_Graph.getGridLabelRenderer().setHighlightZeroLines(false);
 //        G_Graph.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.HORIZONTAL);
 //        G_Graph.getGridLabelRenderer().setNumVerticalLabels(3);

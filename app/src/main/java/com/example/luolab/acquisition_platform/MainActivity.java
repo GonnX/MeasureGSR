@@ -87,7 +87,25 @@ public class MainActivity extends AppCompatActivity{
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if(position == 2){
+                    mSectionsPagerAdapter.notifyDataSetChanged();
+                    createTabIcons();
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
         tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
@@ -107,17 +125,18 @@ public class MainActivity extends AppCompatActivity{
         //tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ppg, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabOne);
 */
+/*
         TextView tabTwo = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabTwo.setText("Guan");
         //tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ppg, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabTwo);
+*/
 
-/*
         TextView tabThree = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabThree.setText("GSR");
         //tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ppg, 0, 0);
-        tabLayout.getTabAt(3).setCustomView(tabThree);
-*/
+        tabLayout.getTabAt(1).setCustomView(tabThree);
+
 
         TextView tabFive = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabFive.setText("Data");
@@ -168,16 +187,16 @@ public class MainActivity extends AppCompatActivity{
                 rootView = (new PPGView()).onCreateView(inflater, container, savedInstanceState);
             }
             */
+            /*
             else if(getArguments().getInt(ARG_SECTION_NUMBER) == 2)
             {
                 rootView = (new GuanView()).onCreateView(inflater, container, savedInstanceState);
             }
-            /*
-            else if(getArguments().getInt(ARG_SECTION_NUMBER) == 4)
+            */
+            else if(getArguments().getInt(ARG_SECTION_NUMBER) == 2)
             {
                 rootView = (new GsrView()).onCreateView(inflater, container, savedInstanceState);
             }
-            */
             else
                 rootView = (new ShowData()).onCreateView(inflater, container, savedInstanceState);
             return rootView;
@@ -204,6 +223,11 @@ public class MainActivity extends AppCompatActivity{
 
             return PlaceholderFragment.newInstance(position + 1);
         }
+        @Override
+        public int getItemPosition(Object object){
+            return  POSITION_NONE;
+        }
+
         @Override
         public int getCount() {
             // Show 2 total pages.

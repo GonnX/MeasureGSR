@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="348dp"
+        android:layout_height="375dp"
         android:layout_margin="20dp"
         android:orientation="vertical">
 
@@ -170,16 +170,16 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/Display_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="如有輸入過，請選擇姓名"
+            android:text="請點選下列箭頭，搜尋先前紀錄，如有輸入過，請選擇姓名"
             android:textSize="20dp"/>
 
         <Spinner
             android:id="@+id/usrSpinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="78dp"
             android:layout_weight="1"/>
     </LinearLayout>
 </LinearLayout>

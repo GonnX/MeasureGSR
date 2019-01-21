@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="88f30aa4-8697-490d-beee-baacee2d8d5c" name="Default" comment="" />
+    <list default="true" id="d3bd1f20-bc74-4870-b95e-69f682b609bb" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,19 +19,91 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="322">
+              <caret line="99" column="37" lean-forward="true" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
+              <folding>
+                <element signature="e#7880#7881#0" expanded="true" />
+                <element signature="e#7925#7926#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="GsrView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/GsrView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="182" column="26" lean-forward="false" selection-start-line="182" selection-start-column="26" selection-end-line="182" selection-end-column="26" />
+              <folding>
+                <element signature="e#6675#8377#0" expanded="true" />
+                <element signature="e#8376#8377#0" expanded="true" />
+                <element signature="e#11778#15510#0" expanded="true" />
+                <element signature="e#15509#15510#0" expanded="true" />
+                <element signature="e#20336#21712#0" expanded="true" />
+                <element signature="e#21711#21712#0" expanded="true" />
+                <element signature="e#21806#21963#0" expanded="true" />
+                <element signature="e#21962#21963#0" expanded="true" />
+                <element signature="e#22057#22214#0" expanded="true" />
+                <element signature="e#22213#22214#0" expanded="true" />
+                <element signature="e#22335#23662#0" expanded="true" />
+                <element signature="e#22590#23093#0" expanded="true" />
+                <element signature="e#23092#23093#0" expanded="true" />
+                <element signature="e#23161#23570#0" expanded="true" />
+                <element signature="e#23569#23570#0" expanded="true" />
+                <element signature="e#23661#23662#0" expanded="true" />
+                <element signature="e#23809#23991#0" expanded="true" />
+                <element signature="e#23990#23991#0" expanded="true" />
+                <element signature="e#24373#24865#0" expanded="true" />
+                <element signature="e#24864#24865#0" expanded="true" />
+                <element signature="e#26060#26570#0" expanded="true" />
+                <element signature="e#26569#26570#0" expanded="true" />
+                <element signature="e#26677#27067#0" expanded="true" />
+                <element signature="e#27066#27067#0" expanded="true" />
+                <element signature="e#29835#36684#0" expanded="true" />
+                <element signature="e#36683#36684#0" expanded="true" />
+                <element signature="e#37814#38322#0" expanded="true" />
+                <element signature="e#38321#38322#0" expanded="true" />
+                <element signature="e#42110#42111#0" expanded="true" />
+                <element signature="e#42170#42171#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_info.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_info.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="175" column="31" lean-forward="false" selection-start-line="175" selection-start-column="31" selection-end-line="175" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>setEnabledUi(0);</find>
+      <find>TempMeanGsrValue</find>
+      <find>UpdateGsrValue</find>
+      <find>UsrInfoDialog</find>
+    </findStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -44,14 +121,14 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="Acquisition_Platform" />
+              <option name="name" value="Acquisition_Platform_GSR" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="Acquisition_Platform" />
+                <option name="name" value="Acquisition_Platform_GSR" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
@@ -77,7 +154,7 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'Acquisition_Platform'." />
+                <option name="description" value="Displays the sub-projects of root project 'Acquisition_Platform_GSR'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
@@ -174,7 +251,7 @@
                 <option name="name" value="compileDebugAndroidTestJavaWithJavac" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'Acquisition_Platform'. [incubating]" />
+                <option name="description" value="Displays the components produced by root project 'Acquisition_Platform_GSR'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
@@ -465,12 +542,12 @@
                 <option name="name" value="generateDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in root project 'Acquisition_Platform'. [incubating]" />
+                <option name="description" value="Displays the dependent components of components in root project 'Acquisition_Platform_GSR'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependentComponents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'Acquisition_Platform'." />
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'Acquisition_Platform_GSR'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
@@ -598,7 +675,7 @@
                 <option name="name" value="bundleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'Acquisition_Platform'. [incubating]" />
+                <option name="description" value="Displays the configuration model of root project 'Acquisition_Platform_GSR'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
@@ -611,7 +688,7 @@
                 <option name="name" value="bundleAppClassesDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'Acquisition_Platform' (some of the displayed tasks may belong to subprojects)." />
+                <option name="description" value="Displays the tasks runnable from root project 'Acquisition_Platform_GSR' (some of the displayed tasks may belong to subprojects)." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
@@ -633,7 +710,7 @@
                 <option name="name" value="transformNativeLibsWithIntermediateJniLibsForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'Acquisition_Platform'." />
+                <option name="description" value="Displays all dependencies declared in root project 'Acquisition_Platform_GSR'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
@@ -722,7 +799,7 @@
                 <option name="name" value="preparePUBLISHED_NATIVE_LIBSDebugForPublishing" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'Acquisition_Platform'." />
+                <option name="description" value="Displays the insight into a specific dependency in root project 'Acquisition_Platform_GSR'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
@@ -927,7 +1004,7 @@
                 <option name="name" value="packageDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'Acquisition_Platform'." />
+                <option name="description" value="Displays the properties of root project 'Acquisition_Platform_GSR'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
@@ -3057,7 +3134,7 @@
                   </entry>
                 </map>
               </option>
-              <option name="name" value="Acquisition_Platform" />
+              <option name="name" value="Acquisition_Platform_GSR" />
               <option name="projectBuildClasspath">
                 <list>
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/announce" />
@@ -3221,9 +3298,17 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/GsrView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/user_info.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="794" />
-    <option name="width" value="886" />
+    <option name="width" value="840" />
     <option name="height" value="1010" />
   </component>
   <component name="ProjectView">
@@ -3241,41 +3326,41 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
-              <item name="Acquisition_Platform" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Acquisition_Platform_GSR" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
-              <item name="Acquisition_Platform" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Acquisition_Platform_GSR" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
-              <item name="Acquisition_Platform" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Acquisition_Platform_GSR" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="acquisition_platform" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
-              <item name="Acquisition_Platform" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Acquisition_Platform_GSR" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
-              <item name="Acquisition_Platform" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Acquisition_Platform_GSR" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
@@ -3285,7 +3370,7 @@
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Acquisition_Platform_GSR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MeasurePPG" />
     <property name="device.picker.selection" value="HT49SYC10424" />
   </component>
   <component name="RunDashboard">
@@ -3459,46 +3544,48 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="88f30aa4-8697-490d-beee-baacee2d8d5c" name="Default" comment="" />
-      <created>1547709458202</created>
+      <changelist id="d3bd1f20-bc74-4870-b95e-69f682b609bb" name="Default" comment="" />
+      <created>1547733049503</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1547709458202</updated>
+      <updated>1547733049503</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.026815642" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14792176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -3509,11 +3596,222 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1978">
+          <caret line="86" column="62" lean-forward="false" selection-start-line="86" selection-start-column="62" selection-end-line="86" selection-end-column="62" />
+          <folding>
+            <element signature="e#7880#7881#0" expanded="true" />
+            <element signature="e#7925#7926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/GsrView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12857">
+          <caret line="639" column="11" lean-forward="false" selection-start-line="639" selection-start-column="11" selection-end-line="639" selection-end-column="11" />
+          <folding>
+            <element signature="e#6675#8377#0" expanded="true" />
+            <element signature="e#8376#8377#0" expanded="true" />
+            <element signature="e#11778#15510#0" expanded="true" />
+            <element signature="e#15509#15510#0" expanded="true" />
+            <element signature="e#20336#21712#0" expanded="true" />
+            <element signature="e#21711#21712#0" expanded="true" />
+            <element signature="e#21806#21963#0" expanded="true" />
+            <element signature="e#21962#21963#0" expanded="true" />
+            <element signature="e#22057#22214#0" expanded="true" />
+            <element signature="e#22213#22214#0" expanded="true" />
+            <element signature="e#22335#23662#0" expanded="true" />
+            <element signature="e#22590#23093#0" expanded="true" />
+            <element signature="e#23092#23093#0" expanded="true" />
+            <element signature="e#23161#23570#0" expanded="true" />
+            <element signature="e#23569#23570#0" expanded="true" />
+            <element signature="e#23661#23662#0" expanded="true" />
+            <element signature="e#23809#23991#0" expanded="true" />
+            <element signature="e#23990#23991#0" expanded="true" />
+            <element signature="e#24373#24865#0" expanded="true" />
+            <element signature="e#24864#24865#0" expanded="true" />
+            <element signature="e#26060#26570#0" expanded="true" />
+            <element signature="e#26569#26570#0" expanded="true" />
+            <element signature="e#26677#27067#0" expanded="true" />
+            <element signature="e#27066#27067#0" expanded="true" />
+            <element signature="e#29835#36684#0" expanded="true" />
+            <element signature="e#36683#36684#0" expanded="true" />
+            <element signature="e#37814#38322#0" expanded="true" />
+            <element signature="e#38321#38322#0" expanded="true" />
+            <element signature="e#42110#42111#0" expanded="true" />
+            <element signature="e#42170#42171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="86" column="62" lean-forward="false" selection-start-line="86" selection-start-column="62" selection-end-line="86" selection-end-column="62" />
+          <folding>
+            <element signature="e#7880#7881#0" expanded="true" />
+            <element signature="e#7925#7926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/GsrView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12857">
+          <caret line="639" column="11" lean-forward="false" selection-start-line="639" selection-start-column="11" selection-end-line="639" selection-end-column="11" />
+          <folding>
+            <element signature="e#6675#8377#0" expanded="true" />
+            <element signature="e#8376#8377#0" expanded="true" />
+            <element signature="e#11778#15510#0" expanded="true" />
+            <element signature="e#15509#15510#0" expanded="true" />
+            <element signature="e#20336#21712#0" expanded="true" />
+            <element signature="e#21711#21712#0" expanded="true" />
+            <element signature="e#21806#21963#0" expanded="true" />
+            <element signature="e#21962#21963#0" expanded="true" />
+            <element signature="e#22057#22214#0" expanded="true" />
+            <element signature="e#22213#22214#0" expanded="true" />
+            <element signature="e#22335#23662#0" expanded="true" />
+            <element signature="e#22590#23093#0" expanded="true" />
+            <element signature="e#23092#23093#0" expanded="true" />
+            <element signature="e#23161#23570#0" expanded="true" />
+            <element signature="e#23569#23570#0" expanded="true" />
+            <element signature="e#23661#23662#0" expanded="true" />
+            <element signature="e#23809#23991#0" expanded="true" />
+            <element signature="e#23990#23991#0" expanded="true" />
+            <element signature="e#24373#24865#0" expanded="true" />
+            <element signature="e#24864#24865#0" expanded="true" />
+            <element signature="e#26060#26570#0" expanded="true" />
+            <element signature="e#26569#26570#0" expanded="true" />
+            <element signature="e#26677#27067#0" expanded="true" />
+            <element signature="e#27066#27067#0" expanded="true" />
+            <element signature="e#29835#36684#0" expanded="true" />
+            <element signature="e#36683#36684#0" expanded="true" />
+            <element signature="e#37814#38322#0" expanded="true" />
+            <element signature="e#38321#38322#0" expanded="true" />
+            <element signature="e#42110#42111#0" expanded="true" />
+            <element signature="e#42170#42171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1978">
+          <caret line="86" column="62" lean-forward="false" selection-start-line="86" selection-start-column="62" selection-end-line="86" selection-end-column="62" />
+          <folding>
+            <element signature="e#7880#7881#0" expanded="true" />
+            <element signature="e#7925#7926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/GsrView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12857">
+          <caret line="639" column="11" lean-forward="true" selection-start-line="639" selection-start-column="11" selection-end-line="639" selection-end-column="11" />
+          <folding>
+            <element signature="e#6675#8377#0" expanded="true" />
+            <element signature="e#8376#8377#0" expanded="true" />
+            <element signature="e#11778#15510#0" expanded="true" />
+            <element signature="e#15509#15510#0" expanded="true" />
+            <element signature="e#20336#21712#0" expanded="true" />
+            <element signature="e#21711#21712#0" expanded="true" />
+            <element signature="e#21806#21963#0" expanded="true" />
+            <element signature="e#21962#21963#0" expanded="true" />
+            <element signature="e#22057#22214#0" expanded="true" />
+            <element signature="e#22213#22214#0" expanded="true" />
+            <element signature="e#22335#23662#0" expanded="true" />
+            <element signature="e#22590#23093#0" expanded="true" />
+            <element signature="e#23092#23093#0" expanded="true" />
+            <element signature="e#23161#23570#0" expanded="true" />
+            <element signature="e#23569#23570#0" expanded="true" />
+            <element signature="e#23661#23662#0" expanded="true" />
+            <element signature="e#23809#23991#0" expanded="true" />
+            <element signature="e#23990#23991#0" expanded="true" />
+            <element signature="e#24373#24865#0" expanded="true" />
+            <element signature="e#24864#24865#0" expanded="true" />
+            <element signature="e#26060#26570#0" expanded="true" />
+            <element signature="e#26569#26570#0" expanded="true" />
+            <element signature="e#26677#27067#0" expanded="true" />
+            <element signature="e#27066#27067#0" expanded="true" />
+            <element signature="e#29835#36684#0" expanded="true" />
+            <element signature="e#36683#36684#0" expanded="true" />
+            <element signature="e#37814#38322#0" expanded="true" />
+            <element signature="e#38321#38322#0" expanded="true" />
+            <element signature="e#42110#42111#0" expanded="true" />
+            <element signature="e#42170#42171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android_SDK/sdk/sources/android-27/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="24857" column="16" lean-forward="false" selection-start-line="24857" selection-start-column="16" selection-end-line="24857" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_info.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="175" column="31" lean-forward="false" selection-start-line="175" selection-start-column="31" selection-end-line="175" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/GsrView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="182" column="26" lean-forward="false" selection-start-line="182" selection-start-column="26" selection-end-line="182" selection-end-column="26" />
+          <folding>
+            <element signature="e#6675#8377#0" expanded="true" />
+            <element signature="e#8376#8377#0" expanded="true" />
+            <element signature="e#11778#15510#0" expanded="true" />
+            <element signature="e#15509#15510#0" expanded="true" />
+            <element signature="e#20336#21712#0" expanded="true" />
+            <element signature="e#21711#21712#0" expanded="true" />
+            <element signature="e#21806#21963#0" expanded="true" />
+            <element signature="e#21962#21963#0" expanded="true" />
+            <element signature="e#22057#22214#0" expanded="true" />
+            <element signature="e#22213#22214#0" expanded="true" />
+            <element signature="e#22335#23662#0" expanded="true" />
+            <element signature="e#22590#23093#0" expanded="true" />
+            <element signature="e#23092#23093#0" expanded="true" />
+            <element signature="e#23161#23570#0" expanded="true" />
+            <element signature="e#23569#23570#0" expanded="true" />
+            <element signature="e#23661#23662#0" expanded="true" />
+            <element signature="e#23809#23991#0" expanded="true" />
+            <element signature="e#23990#23991#0" expanded="true" />
+            <element signature="e#24373#24865#0" expanded="true" />
+            <element signature="e#24864#24865#0" expanded="true" />
+            <element signature="e#26060#26570#0" expanded="true" />
+            <element signature="e#26569#26570#0" expanded="true" />
+            <element signature="e#26677#27067#0" expanded="true" />
+            <element signature="e#27066#27067#0" expanded="true" />
+            <element signature="e#29835#36684#0" expanded="true" />
+            <element signature="e#36683#36684#0" expanded="true" />
+            <element signature="e#37814#38322#0" expanded="true" />
+            <element signature="e#38321#38322#0" expanded="true" />
+            <element signature="e#42110#42111#0" expanded="true" />
+            <element signature="e#42170#42171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/luolab/acquisition_platform/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="99" column="37" lean-forward="true" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
+          <folding>
+            <element signature="e#7880#7881#0" expanded="true" />
+            <element signature="e#7925#7926#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

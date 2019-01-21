@@ -88,6 +88,7 @@ public class ShowData extends Fragment{
 
     private String[] GSRValue;
     private String[] PPGValue;
+    private TextView[] Feature_Textview;
     private TextView[] Value_Textview;
 
     private Handler Update;
@@ -114,10 +115,10 @@ public class ShowData extends Fragment{
 
         ShowDataView = inflater.inflate(R.layout.showdata, container, false);
 
-        //dialogView = View.inflate(inflater.getContext(),R.layout.feature_image,null);
-        dialogView2 = View.inflate(inflater.getContext(),R.layout.ppg_feature_information,null);
+        dialogView = View.inflate(inflater.getContext(),R.layout.feature_image,null);
+        //dialogView2 = View.inflate(inflater.getContext(),R.layout.ppg_feature_information,null);
 
-        /*Dialog_Builder = new AlertDialog.Builder((Activity)inflater.getContext())
+        Dialog_Builder = new AlertDialog.Builder((Activity)inflater.getContext())
                 .setTitle("GSR_Feature_Information")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
@@ -125,7 +126,7 @@ public class ShowData extends Fragment{
 
                     }
                 });
-        */
+        /*
         Dialog_Builder2 = new AlertDialog.Builder((Activity)inflater.getContext())
                 .setTitle("PPG_Feature_Information")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -134,22 +135,25 @@ public class ShowData extends Fragment{
 
                     }
                 });
-        /*
-        Dialog = Dialog_Builder.create();
-        Dialog.setView(dialogView);
         */
 
+        Dialog = Dialog_Builder.create();
+        Dialog.setView(dialogView);
+
+        /*
         Dialog2 = Dialog_Builder2.create();
         Dialog2.setView(dialogView2);
+        */
 
-        //GSRValue = new String[12];
-        PPGValue = new String[18];
+        GSRValue = new String[12];
+        //PPGValue = new String[28];
 
-        Value_Textview = new TextView[18];
+        Feature_Textview = new TextView[29];
+        Value_Textview = new TextView[29];
         Update = new Handler();
 
-        //bt = ShowDataView.findViewById(R.id.button);
-        bt2 = ShowDataView.findViewById(R.id.button2);
+        bt = ShowDataView.findViewById(R.id.button);
+        //bt2 = ShowDataView.findViewById(R.id.button2);
 
         int counter = 0;
         int counter1 = 0;
@@ -167,11 +171,6 @@ public class ShowData extends Fragment{
         Value_Textview[counter++] = ShowDataView.findViewById(R.id.feature10);
         Value_Textview[counter++] = ShowDataView.findViewById(R.id.feature11);
         Value_Textview[counter++] = ShowDataView.findViewById(R.id.feature12);
-        Value_Textview[counter++] = ShowDataView.findViewById(R.id.feature13);
-        Value_Textview[counter++] = ShowDataView.findViewById(R.id.feature14);
-        Value_Textview[counter++] = ShowDataView.findViewById(R.id.feature15);
-        Value_Textview[counter++] = ShowDataView.findViewById(R.id.feature32);
-        Value_Textview[counter++] = ShowDataView.findViewById(R.id.feature34);
 
 
         String result = GetDB(Find_ID,Get_Uri);
@@ -187,7 +186,7 @@ public class ShowData extends Fragment{
         }
 
         //ID = 24;
-        /*
+
         result = GetDB("SELECT * FROM gsr where id = " + ID,Get_Uri);
         jsonArray = null;
         try {
@@ -215,8 +214,8 @@ public class ShowData extends Fragment{
         for(int i = 0 ; i < 12 ; i++){
             Value_Textview[i].setText(GSRValue[i]);
         }
-        */
 
+        /*
         result = GetDB("SELECT * FROM guan where id = " + ID,Get_Uri);
         jsonArray = null;
         try {
@@ -261,13 +260,14 @@ public class ShowData extends Fragment{
                 for (int i = 0; i < 15; i++) {
                     Value_Textview[i].setText(PPGValue[i]);
                 }
-                Value_Textview[15].setText(String.valueOf(HRV));
-                Value_Textview[16].setText(String.valueOf(LF) + " / " + String.valueOf(HF) + " = " + df.format(LF_HF));
+                Value_Textview[27].setText(String.valueOf(HRV));
+                Value_Textview[28].setText(String.valueOf(LF) + " / " + String.valueOf(HF) + " = " + df.format(LF_HF));
             }
         }
+        */
         //uri = Uri.parse("http://140.116.164.6/UserInformation.php");
         //it = new Intent(Intent.ACTION_VIEW, uri);
-        /*
+
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -275,23 +275,18 @@ public class ShowData extends Fragment{
             Dialog.show();
             }
         });
-        */
 
+        /*
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Dialog2.show();
             }
         });
-
+        */
         //Update_Feature();
 
         return ShowDataView;
-    }
-    @Override
-    public void onResume() {
-        super.onResume();
-        Update_Feature();
     }
     private String GetDB(String Query_Command,String uri)
     {
@@ -312,103 +307,5 @@ public class ShowData extends Fragment{
         } catch(Exception e) {
         }
         return result;
-    }
-    private void Update_Feature()
-    {
-        int counter1 = 0;
-        int counter2 = 0;
-
-
-        String result = GetDB(Find_ID,Get_Uri);
-        JSONArray jsonArray = null;
-        try {
-            jsonArray = new JSONArray(result);
-            for(int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonData = jsonArray.getJSONObject(i);
-                ID = Integer.parseInt(jsonData.getString("id"));
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        /*
-        result = GetDB("SELECT * FROM gsr where id = " + ID, Get_Uri);
-        jsonArray = null;
-        try {
-            jsonArray = new JSONArray(result);
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonData = jsonArray.getJSONObject(i);
-                GSRValue[counter1++] = jsonData.getString("value0");
-                GSRValue[counter1++] = jsonData.getString("value1");
-                GSRValue[counter1++] = jsonData.getString("value2");
-                GSRValue[counter1++] = jsonData.getString("value3");
-                GSRValue[counter1++] = jsonData.getString("value4");
-                GSRValue[counter1++] = jsonData.getString("value5");
-                GSRValue[counter1++] = jsonData.getString("value6");
-                GSRValue[counter1++] = jsonData.getString("value7");
-                GSRValue[counter1++] = jsonData.getString("value8");
-                GSRValue[counter1++] = jsonData.getString("value9");
-                GSRValue[counter1++] = jsonData.getString("value10");
-                GSRValue[counter1++] = jsonData.getString("value11");
-                GSRValue[counter1++] = jsonData.getString("value12");
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        for (int i = 0; i < 12; i++) {
-            Value_Textview[i].setText(GSRValue[i]);
-        }
-        */
-
-        result = GetDB("SELECT * FROM ppg where id = " + ID, Get_Uri);
-        jsonArray = null;
-        try {
-            jsonArray = new JSONArray(result);
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonData = jsonArray.getJSONObject(i);
-                PPGValue[counter2++] = jsonData.getString("PeakTwiceAmp");
-                PPGValue[counter2++] = jsonData.getString("TwiceDownAmp");
-                PPGValue[counter2++] = jsonData.getString("Angle");
-                PPGValue[counter2++] = jsonData.getString("PeakAmp");
-                PPGValue[counter2++] = jsonData.getString("Systolic_Dis");
-                PPGValue[counter2++] = jsonData.getString("Diastolic_Dis");
-                PPGValue[counter2++] = jsonData.getString("PPT");
-                PPGValue[counter2++] = jsonData.getString("IBI");
-                PPGValue[counter2++] = jsonData.getString("C1");
-                PPGValue[counter2++] = jsonData.getString("C2");
-                PPGValue[counter2++] = jsonData.getString("C3");
-                PPGValue[counter2++] = jsonData.getString("C4");
-                PPGValue[counter2++] = jsonData.getString("C5");
-                PPGValue[counter2++] = jsonData.getString("C6");
-                PPGValue[counter2++] = jsonData.getString("C7");
-                PPGValue[counter2++] = jsonData.getString("HRV");
-                PPGValue[counter2++] = jsonData.getString("LF");
-                PPGValue[counter2++] = jsonData.getString("HF");
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        char[] LF = new char[10];
-        char[] HF = new char[10];
-        char[] HRV = new char[10];
-
-        if(PPGValue[15] != null) {
-            if (PPGValue[15].equals("") != true) {
-                PPGValue[15].getChars(0, 5, HRV, 0);
-                PPGValue[16].getChars(0, 5, LF, 0);
-                PPGValue[17].getChars(0, 5, HF, 0);
-
-                DecimalFormat df = new DecimalFormat("######0.00");
-                Double LF_HF = Double.parseDouble(String.valueOf(LF)) / Double.parseDouble(String.valueOf(HF));
-
-                for (int i = 0; i < 15; i++) {
-                    Value_Textview[i].setText(PPGValue[i]);
-                }
-                Value_Textview[16].setText(String.valueOf(HRV));
-                Value_Textview[17].setText(String.valueOf(LF) + " / " + String.valueOf(HF) + " = " + df.format(LF_HF));
-            }
-        }
     }
 }

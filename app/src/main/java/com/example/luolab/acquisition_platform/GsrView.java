@@ -1,5 +1,6 @@
 package com.example.luolab.acquisition_platform;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -32,6 +33,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -106,7 +108,12 @@ public class GsrView extends Fragment{
     private Handler measureAcupoint_Handler;
     private Handler TimeDialog_Timer_Handler;
     private Handler mHandler;
+    private Handler SerialmHandler;
     private Handler Update_GsrValue;
+
+    private Handler Update_UsrInfo_Text;
+
+    private boolean SerialUIFlag = false;
 
 //    private AlertDialog.Builder TimeDialog_Builder;
 //    private AlertDialog TimeDialog;
@@ -140,6 +147,8 @@ public class GsrView extends Fragment{
     private BufferedWriter[] bw;
 
     private TextView[] UsrInfo = new TextView[6];
+
+    private TextView UsrInfo_DisplayText;
 
     private Calendar c;
     private SimpleDateFormat dateformat;
@@ -175,6 +184,8 @@ public class GsrView extends Fragment{
     private String Update_Command_GSR = "UPDATE GSR SET ";
     private String Update_Command_Guan = "UPDATE guan SET ";
 
+    private boolean UsrInfo_text_Enable = false;
+
     public final String ACTION_USB_PERMISSION = "com.hariharan.arduinousb.USB_PERMISSION";
     UsbManager usbManager;
     UsbDevice device;
@@ -187,6 +198,16 @@ public class GsrView extends Fragment{
             SetChoice(arg0,arg0.length,G_Inflater);
         }
     };
+    /*
+    private View.OnTouchListener spinnerOnTouch = new View.OnTouchListener() {
+        public boolean onTouch(View v, MotionEvent event) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                UsrInfo_DisplayText.setText("如有輸入過，請選擇姓名");
+            }
+            return false;
+        }
+    };
+    */
 
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() { //Broadcast Receiver to automatically start and stop the Serial connection.
         @Override
@@ -269,6 +290,7 @@ public class GsrView extends Fragment{
 
         G_Inflater = inflater;
 
+        Update_UsrInfo_Text = new Handler();
 
         usbManager = (UsbManager) inflater.getContext().getSystemService(inflater.getContext().USB_SERVICE);
         IntentFilter filter = new IntentFilter();
@@ -362,6 +384,7 @@ public class GsrView extends Fragment{
 
                     usrInfo_Array.add(UsrInfo[0].getText().toString());
                     Toast.makeText(inflater.getContext(),"設定完成",Toast.LENGTH_SHORT).show();
+                    SerialUIFlag = true;
                     //setEnabledUi(2);
                 }
             }
@@ -394,7 +417,10 @@ public class GsrView extends Fragment{
         usrInfo_Adapter = new ArrayAdapter<String>(inflater.getContext(),R.layout.usr_spinner,R.id.spinner_tv,usrInfo_Array);
 
         mySpinner = dialogView.findViewById(R.id.usrSpinner);
+        UsrInfo_DisplayText = dialogView.findViewById(R.id.Display_Text);
         mySpinner.setAdapter(usrInfo_Adapter);
+        //mySpinner.setOnTouchListener(spinnerOnTouch);
+
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -543,9 +569,10 @@ public class GsrView extends Fragment{
                         .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                if(selectSampleRate != null && SerialFlag != false) {
+                                /*if(selectSampleRate != null && SerialFlag != false) {
                                     setEnabledUi(0);
-                                }
+                                    Toast.makeText(inflater.getContext(),"等待連接",Toast.LENGTH_SHORT).show();
+                                }*/
                             }
                         })
                         .setSingleChoiceItems(sampleRate_Item, 2, new DialogInterface.OnClickListener() {
@@ -566,13 +593,6 @@ public class GsrView extends Fragment{
         setUsrInfoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                usbManager = (UsbManager) inflater.getContext().getSystemService(inflater.getContext().USB_SERVICE);
-                IntentFilter filter = new IntentFilter();
-                filter.addAction(ACTION_USB_PERMISSION);
-                filter.addAction(UsbManager.ACTION_USB_DEVICE_ATTACHED);
-                filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
-                inflater.getContext().registerReceiver(broadcastReceiver, filter);
-                //onClickStart();
                 updateDB();
                 UsrInfoDialog.show();
             }
@@ -587,7 +607,27 @@ public class GsrView extends Fragment{
         //nextBtn.setEnabled(true);
         //backBtn.setEnabled(true);
 
+        SerialmHandler = new Handler();
+        SerialH();
+
         return gsrView;
+    }
+    private void SerialH()
+    {
+        SerialmHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if(selectSampleRate != null && SerialFlag != false && SerialUIFlag != false) {
+                    setEnabledUi(0);
+                }
+                else {
+                    if(SerialUIFlag != false)
+                        Toast.makeText(G_Inflater.getContext(),"等待感測器連接",Toast.LENGTH_SHORT).show();
+                    SerialmHandler.postDelayed(this, 2000);
+                }
+            }
+        },2000);
+
     }
     private String GetDB(String Query_Command,String uri)
     {
@@ -1046,17 +1086,18 @@ public class GsrView extends Fragment{
         byte[] Data = new byte[1];
 
         if(selectSampleRate.equals(sampleRate_Item[0]))
-            Data[0] = 0x35;
+            Data[0] = 0x30;
         else if(selectSampleRate.equals(sampleRate_Item[1]))
-            Data[0] = 0x36;
+            Data[0] = 0x31;
         else
-            Data[0] = 0x37;
+            Data[0] = 0x32;
 
         serialPort.write(Data);
     }
     private void NextBtn_Click(final LayoutInflater inflater){
         ((Vibrator) inflater.getContext().getSystemService(Service.VIBRATOR_SERVICE)).vibrate(new long[]{0,50}, -1);
         // 改成12張圖片
+        /*
         if(counter == 11) {
             UpdateAcupointImage(1, counter);
             new AlertDialog.Builder((Activity)inflater.getContext()).setMessage("已量完，已是最後一個量測點" + '\n' + '\n' + "如需量測別的受測者" + '\n' + "請按setUsrInfo更改")
@@ -1070,12 +1111,33 @@ public class GsrView extends Fragment{
         }
         else
             UpdateAcupointImage(1,++counter);
+        */
+        if(counter == 11) {
+            UpdateAcupointImage(1, counter);
+            new AlertDialog.Builder((Activity)inflater.getContext()).setMessage("已量完畢，" + '\n' + '\n' + "如需量測別的受測者" + '\n' + "請按setUsrInfo更改")
+                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    })
+                    .create()
+                    .show();
+        }
+        else if(counter == 10) {
+            UpdateAcupointImage(1, ++counter);
+            nextBtn.setText("UPLOAD");
+        }
+        else {
+            UpdateAcupointImage(1, ++counter);
+        }
     }
     private void BackBtn_Click(LayoutInflater inflater){
         ((Vibrator) inflater.getContext().getSystemService(Service.VIBRATOR_SERVICE)).vibrate(new long[]{0,50}, -1);
         if(counter == 0)
             UpdateAcupointImage(2,counter);
-        else
-            UpdateAcupointImage(2,--counter);
+        else {
+            UpdateAcupointImage(2, --counter);
+            nextBtn.setText("NEXT");
+        }
     }
 }
